@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Editar Nota</h2>
+<form method="post" action="{{ url_for('editar_nota') }}">
+    <input type="number" name="id_nota" placeholder="ID de la nota" required>
+    <input type="text" name="titulo" placeholder="Nuevo título" required>
+    <input type="text" name="contenido" placeholder="Nuevo contenido (0.0 - 5.0)" required>
+    <button type="submit">Actualizar Nota</button>
+</form>
+
+<a href="{{ url_for('menu_usuario') }}"><button>Volver al Menú</button></a>
+<a href="{{ url_for('logout') }}"><button>Cerrar Sesión</button></a>
+{% endblock %}

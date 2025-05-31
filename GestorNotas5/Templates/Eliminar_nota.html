@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Eliminar Nota</h2>
+<form method="post" action="{{ url_for('eliminar_nota') }}">
+    <input type="number" name="id_nota" placeholder="ID de la nota a eliminar" required>
+    <button type="submit">Eliminar Nota</button>
+</form>
+
+<a href="{{ url_for('menu_usuario') }}"><button>Volver al Menú</button></a>
+<a href="{{ url_for('logout') }}"><button>Cerrar Sesión</button></a>
+{% endblock %}
+
+
